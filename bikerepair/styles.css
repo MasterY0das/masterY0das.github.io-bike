@@ -1,0 +1,231 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', Arial, sans-serif; /* More professional font */
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5; /* Light grey background */
+    color: #4a4a4a;  /* Dark grey text for readability */
+    line-height: 1.6;
+}
+
+header {
+    background: linear-gradient(45deg, #3b5998, #8b9dc3);  /* Subtle, softer blue tones */
+    color: white;
+    padding: 20px 30px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Softer shadow */
+    border-bottom: 2px solid #ddd;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.2rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #ffffff;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+nav ul {
+    list-style: none;
+    margin: 20px 0 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+    position: relative;
+    letter-spacing: 1px;
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #f0f8ff;
+}
+
+nav ul li a:hover::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 100%;
+    height: 3px;
+    background: #f0f8ff;
+    border-radius: 2px;
+    animation: slideIn 0.3s ease-in-out;
+}
+
+@keyframes slideIn {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* Main Section */
+main {
+    padding: 40px 30px;
+    max-width: 1200px;
+    margin: 40px auto;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+main:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 25px;
+    text-align: center;
+    color: #2c3e50;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.grid a {
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    padding: 25px;
+    background-color: #fff;
+}
+
+.grid a:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background-color: #f0f9ff;
+}
+
+.grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.grid a:hover img {
+    transform: scale(1.05);
+}
+
+.grid h3 {
+    margin: 15px 0;
+    font-size: 1.2rem;
+    color: #3b5998;  /* Muted blue for headings */
+}
+
+footer {
+    text-align: center;
+    background: #333;
+    color: white;
+    padding: 20px 30px;
+    margin-top: 60px;
+    font-size: 1rem;
+    border-top: 2px solid #ddd;
+}
+
+/* Tutorial Pages */
+.tutorial {
+    margin-top: 40px;
+}
+
+.tutorial img {
+    width: 100%;
+    max-width: 700px;
+    border-radius: 12px;
+    display: block;
+    margin: 30px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tutorial ol {
+    padding-left: 20px;
+    margin-top: 20px;
+    line-height: 1.8;
+}
+
+.tutorial ol li {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    animation: listFadeIn 0.5s ease-in-out;
+}
+
+@keyframes listFadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav ul li {
+        margin: 0 15px;
+    }
+
+    main {
+        padding: 30px 20px;
+        margin: 30px auto;
+    }
+
+    .grid {
+        gap: 20px;
+    }
+
+    .grid a {
+        padding: 20px;
+    }
+
+    .grid h3 {
+        font-size: 1.1rem;
+    }
+
+    .tutorial img {
+        max-width: 100%;
+        margin-top: 20px;
+    }
+}

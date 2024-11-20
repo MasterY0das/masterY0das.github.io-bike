@@ -1,0 +1,15 @@
+{
+    "name": "bike-repair-guide",
+    "version": "1.0.0",
+    "description": "A website for bike repair tutorials",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js"
+    },
+    "dependencies": {
+        "axios": "^0.21.4",
+        "express": "^4.21.1"
+    },
+    "author": "",
+    "license": "ISC"
+}
